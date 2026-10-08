@@ -48,16 +48,7 @@ github:alter-c/dsh-plugin-session-delete
 
 DSH clones the repository and packs it automatically according to this package's `files` field — **no manual packing**.
 
-Two things to know:
-
-- **There is no auto-update.** A git dependency is resolved to a concrete commit at install time, so once new commits land you must **uninstall and install again** to pick them up (DSH does not support plugin auto-update yet);
-- **For a private setup or when GitHub is hard to reach**, use the SSH form so your local SSH key applies directly:
-
-  ```text
-  git+ssh://git@github.com/alter-c/dsh-plugin-session-delete.git
-  ```
-
-  > Do not paste the `git@github.com:alter-c/dsh-plugin-session-delete.git` scp-style URL GitHub shows. DSH's plugin page accepts it, but pnpm's resolver does not, and reports `ERR_PNPM_SPEC_NOT_SUPPORTED_BY_ANY_RESOLVER` — the `git+ssh://` protocol prefix is required.
+**There is no auto-update**: a git dependency is resolved to a concrete commit at install time, so once new commits land you must **uninstall and install again** to pick them up (DSH does not support plugin auto-update yet).
 
 ### Install from local source (development)
 
