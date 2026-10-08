@@ -1,0 +1,9 @@
+# Dependencies
+node_modules/
+
+# Packed artifacts produced by pack.cmd
+*.tgz
+
+# OS noise
+.DS_Store
+Thumbs.db

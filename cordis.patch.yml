@@ -1,0 +1,4 @@
+# Add only this plugin's row. No official DSH component is replaced.
+- insert:
+    - id: session-delete
+      name: dsh-plugin-session-delete
