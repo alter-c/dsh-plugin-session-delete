@@ -54,8 +54,10 @@ DSH 会把仓库拉下来，并按本包 `files` 字段自动打包安装，**�
 - **私有部署或 GitHub 访问受限**时，可改用 SSH 形式，让本机 SSH key 直接生效：
 
   ```text
-  git@github.com:alter-c/dsh-plugin-session-delete.git
+  git+ssh://git@github.com/alter-c/dsh-plugin-session-delete.git
   ```
+
+  > 不要直接粘贴 GitHub 页面上那个 `git@github.com:alter-c/dsh-plugin-session-delete.git`（scp 简写）。DSH 的安装界面接受它，但 pnpm 的解析器不认，会报 `ERR_PNPM_SPEC_NOT_SUPPORTED_BY_ANY_RESOLVER`——必须带上 `git+ssh://` 协议前缀。
 
 ### 本地源码安装（开发用）
 

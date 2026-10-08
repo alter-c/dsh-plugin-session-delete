@@ -54,8 +54,10 @@ Two things to know:
 - **For a private setup or when GitHub is hard to reach**, use the SSH form so your local SSH key applies directly:
 
   ```text
-  git@github.com:alter-c/dsh-plugin-session-delete.git
+  git+ssh://git@github.com/alter-c/dsh-plugin-session-delete.git
   ```
+
+  > Do not paste the `git@github.com:alter-c/dsh-plugin-session-delete.git` scp-style URL GitHub shows. DSH's plugin page accepts it, but pnpm's resolver does not, and reports `ERR_PNPM_SPEC_NOT_SUPPORTED_BY_ANY_RESOLVER` — the `git+ssh://` protocol prefix is required.
 
 ### Install from local source (development)
 
